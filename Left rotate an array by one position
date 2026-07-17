@@ -1,0 +1,17 @@
+public class LeftRotate
+{
+	public static void main(String[] args) {
+	    int[] arr={1,2,3,5,6};
+	    int j=0;
+	    int first=arr[0];
+	    for (int i=1;i<arr.length;i++){
+	        arr[j]=arr[i];
+	        j++;
+	    }
+	    arr[j]=first;
+	    for (int num:arr){
+	        System.out.println(num+" ");
+	    }
+	    
+	}
+}
