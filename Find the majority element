@@ -1,0 +1,30 @@
+public class MajorityElement
+{
+	public static void main(String[] args) {
+	    int[] arr={3,3,4,2,3,3,3};
+	    int count=1;
+	    int n=arr[0];
+	    for (int i=1;i<arr.length;i++){
+	        if (arr[i]==n){
+	            count++;
+	        }else{
+	            count--;
+	        }
+	        if (count==0){
+	            n=arr[i];
+	            count=1;
+	        }
+	    }
+	    count=0;
+	    for (int num:arr){
+	        if (num==n){
+	            count++;
+	        }
+	    }
+	    if (count>arr.length/2){
+	        System.out.println("Majority element:"+n);
+	    }else{
+	        System.out.println("No majority element");
+	    }
+	}
+}
